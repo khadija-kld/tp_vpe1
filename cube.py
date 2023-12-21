@@ -78,15 +78,13 @@ class Cube:
                     
                 elif event.key == pygame.K_UP:
                     self.zoom -= self.zoom_speed
-                    #self.walking_sound.play()
-                    #print(f"zooming in: {self.zoom}")
+                
                     
                 elif event.key == pygame.K_w:    
                     self.angle_x -= self.rotation_speed
                 elif event.key == pygame.K_DOWN:
                     self.zoom += self.zoom_speed
-                    #self.walking_sound.play()
-                    #print(f"zooming out:{self.zoom}")
+                    
                 elif event.key == pygame.K_x:
                     self.angle_x += self.rotation_speed
                 elif event.key == pygame.K_a:  
