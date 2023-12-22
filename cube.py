@@ -39,11 +39,7 @@ class Cube:
             [0, 1, 2, 3],  
         ]
 
-        self.edges = [
-            (0, 1), (1, 2), (2, 3), (3, 0),
-            (4, 5), (5, 6), (6, 7), (7, 4),
-            (0, 4), (1, 5), (2, 6), (3, 7)
-        ]
+
 
     def project_3d_to_2d(self, x, y, z):
         
@@ -93,7 +89,7 @@ class Cube:
                     self.angle_y += self.rotation_speed
 
     def draw(self, screen):
-        if self.zoom < 0 or self.zoom >30 :
+        if self.zoom < 0 or self.zoom >50 :
             return
         
         cube_2d = []

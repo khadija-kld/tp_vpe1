@@ -9,7 +9,7 @@ def subdivide_face(corners, divisions=8):
     subdivided = []
     for i in range(divisions):
         for j in range(divisions):
-            
+           #position for each subdivisions 
             frac_i = i / divisions
             frac_j = j / divisions
             frac_i_plus_1 = (i + 1) / divisions
@@ -41,6 +41,7 @@ class Texture:
         blocks = subdivide_face(face_points_2d, self.texture_size)
         for block in blocks:
             x, y = int(block[0][0]), int(block[0][1])
+            #I used modulo here so that the position of x,y in tab will be accecible
             color = self.texture_data[x % self.texture_image.get_width(), 
-                                      y % self.texture_image.get_height()]
+                                      y % self.texture_image.get_height()] 
             pg.draw.polygon(screen, color, block)
